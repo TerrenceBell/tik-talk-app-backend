@@ -5,3 +5,28 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+topics = Topic.create([{title: 'Games'}, {title: 'NBA'}, {title: 'Cats'}])
+
+user = User.create(username: 'Terrence')
+
+other_user = User.create(username: 'Rachel')
+
+messages = Message.create([
+    {
+        content: 'testing this thingy', 
+        topic: Topic.first,
+        user: User.first
+    },
+    {
+        content: 'this is another message ', 
+        topic: Topic.second,
+        user: User.second
+    },
+    {
+        content: 'Cats are cool', 
+        topic: Topic.third,
+        user: User.first
+    }
+
+])
